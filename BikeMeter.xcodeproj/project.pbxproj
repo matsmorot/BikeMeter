@@ -14,8 +14,8 @@
 		B2F097C41E82A3FE00A10279 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F097C21E82A3FE00A10279 /* Main.storyboard */; };
 		B2F097C61E82A3FE00A10279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F097C51E82A3FE00A10279 /* Assets.xcassets */; };
 		B2F097C91E82A3FE00A10279 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F097C71E82A3FE00A10279 /* LaunchScreen.storyboard */; };
-		B2F097D31E8873E200A10279 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F097D21E8873E200A10279 /* iCarousel.m */; };
 		B2FABB3D1EAEAB6000B7CB42 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FABB3C1EAEAB6000B7CB42 /* Stopwatch.swift */; };
+		B2FABB3F1EC1FD3000B7CB42 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FABB3E1EC1FD3000B7CB42 /* KDCircularProgress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,8 @@
 		B2F097C51E82A3FE00A10279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2F097C81E82A3FE00A10279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2F097CA1E82A3FE00A10279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2F097D01E8873E100A10279 /* BikeMeter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BikeMeter-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		B2F097D11E8873E200A10279 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = ../iCarousel.h; sourceTree = "<group>"; };
-		B2F097D21E8873E200A10279 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = ../iCarousel.m; sourceTree = "<group>"; };
 		B2FABB3C1EAEAB6000B7CB42 /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		B2FABB3E1EC1FD3000B7CB42 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +62,12 @@
 		B2F097BD1E82A3FE00A10279 /* BikeMeter */ = {
 			isa = PBXGroup;
 			children = (
-				B2F097D01E8873E100A10279 /* BikeMeter-Bridging-Header.h */,
-				B2F097D11E8873E200A10279 /* iCarousel.h */,
-				B2F097D21E8873E200A10279 /* iCarousel.m */,
 				B2F097BE1E82A3FE00A10279 /* AppDelegate.swift */,
 				B2C4556E1E92A6270078DF09 /* Common.swift */,
 				B2F097C01E82A3FE00A10279 /* ViewController.swift */,
 				B22050B01E8D971900C489F1 /* extensions.swift */,
 				B2FABB3C1EAEAB6000B7CB42 /* Stopwatch.swift */,
+				B2FABB3E1EC1FD3000B7CB42 /* KDCircularProgress.swift */,
 				B2F097C21E82A3FE00A10279 /* Main.storyboard */,
 				B2F097C51E82A3FE00A10279 /* Assets.xcassets */,
 				B2F097C71E82A3FE00A10279 /* LaunchScreen.storyboard */,
@@ -154,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2F097D31E8873E200A10279 /* iCarousel.m in Sources */,
+				B2FABB3F1EC1FD3000B7CB42 /* KDCircularProgress.swift in Sources */,
 				B2FABB3D1EAEAB6000B7CB42 /* Stopwatch.swift in Sources */,
 				B2F097C11E82A3FE00A10279 /* ViewController.swift in Sources */,
 				B2F097BF1E82A3FE00A10279 /* AppDelegate.swift in Sources */,
@@ -287,7 +283,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.pixlig.BikeMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "BikeMeter-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -304,7 +299,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.pixlig.BikeMeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "BikeMeter-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

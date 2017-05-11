@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 extension TimeInterval {
-    var minuteSecondMS: String {
-        return String(format:"%d:%02d:%02d:%03d", hour, minute, second, millisecond)
+    var hourMinuteSecondMS: String {
+        return String(format:"%d:%02d:%02d:%02d", hour, minute, second, millisecond)
     }
     var hour: Int {
         return Int(self / 3600) % 3600
@@ -22,12 +23,26 @@ extension TimeInterval {
         return Int(self) % 60
     }
     var millisecond: Int {
-        return Int(self * 1000) % 1000
+        return Int(self * 100) % 100
     }
 }
 
 extension Int {
     var msToSeconds: Double {
         return Double(self) / 1000
+    }
+}
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(netHex:Int) {
+        self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
     }
 }
